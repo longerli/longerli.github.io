@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <meta name="description" content="Hexo加Github搭建个人博客">
   <meta name="author" content="longer li">
   <!-- Open Graph Data -->
   <meta property="og:title" content="我的第一篇博客">
-  <meta property="og:description" content="">
+  <meta property="og:description" content="Hexo加Github搭建个人博客">
   <meta property="og:site_name" content="多维空间">
   <meta property="og:type" content="article">
   <meta property="og:image" content="http://yoursite.com">
@@ -100,7 +100,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2018-10-29</span>
-            <span class="time">16:53:01</span>
+            <span class="time">17:11:43</span>
           </span>
           
         </div>
@@ -116,17 +116,21 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>#Hexo加Github搭建个人博客</p>
-<p>##安装node<br>    安装node并配置环境变量以及npm配置模块安装等内容不再赘述。</p>
-<p>##创建Github域名和空间<br>    1 注册Github账号，账号名称影响之后的访问地址。<br>    2 创建仓库，存储网站。</p>
-<p>##安装Git<br>    不再赘述。</p>
-<p>##安装Hexo<br>    npm install hexo-cli -g</p>
-<p>##编写发布</p>
-<p>###创建博客<br>    在电脑任意位置执行<br>    hexo init username.github.io(username换成你自己在Github上的用户名)。</p>
-<p>###更改配置</p>
-<p>####安装主题<br>    切换到刚才生成的Hexo目录，安装主题。<br>    以aero-dual主题为例<br>    $ git clone <a href="https://github.com/levblanc/hexo-theme-aero-dual.git" target="_blank" rel="noopener">https://github.com/levblanc/hexo-theme-aero-dual.git</a> themes/aero-dual<br>    更多主题见:<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-<p>####基础配置<br>    注意在Hexo目录中有两个_config.yml文件，一个是项目主配置文件，另一个在themes/主题文件夹<br>    修改主配置文件示例:</p>
-<pre><code># Site
+          <h1 id="Hexo加Github搭建个人博客"><a href="#Hexo加Github搭建个人博客" class="headerlink" title="Hexo加Github搭建个人博客"></a>Hexo加Github搭建个人博客</h1><h2 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h2><pre><code>安装node并配置环境变量以及npm配置模块安装等内容不再赘述。
+</code></pre><h2 id="创建Github域名和空间"><a href="#创建Github域名和空间" class="headerlink" title="创建Github域名和空间"></a>创建Github域名和空间</h2><pre><code>1 注册Github账号，账号名称影响之后的访问地址。
+2 创建仓库，存储网站。
+</code></pre><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><pre><code>不再赘述。
+</code></pre><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><pre><code>npm install hexo-cli -g
+</code></pre><h2 id="编写发布"><a href="#编写发布" class="headerlink" title="编写发布"></a>编写发布</h2><h3 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h3><pre><code>在电脑任意位置执行
+hexo init username.github.io
+(username换成你自己在Github上的用户名)
+</code></pre><h3 id="更改配置"><a href="#更改配置" class="headerlink" title="更改配置"></a>更改配置</h3><h4 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h4><pre><code>切换到刚才生成的Hexo目录，安装主题。
+以aero-dual主题为例
+$ git clone https://github.com/levblanc/hexo-theme-aero-dual.git themes/aero-dual
+</code></pre><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">更多主题</a></p>
+<h4 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h4><pre><code>注意在Hexo目录中有两个_config.yml文件，一个是项目主配置文件，另一个在themes/主题文件夹
+修改主配置文件示例:
+# Site
 title: 多维空间
 subtitle:
 description:
@@ -149,13 +153,16 @@ deploy:
  type: git
  repo: https://github.com/longerli/longerli.github.io.git
 注意键值之间有空格。
-</code></pre><p>####主题配置<br>    修改主题文件夹中的_config.yml文件，略过(在主题下载网站对应每个主题都有)</p>
-<p>###写文章<br>    在username.github.io/source/_posts下创建你的第一篇博客，例如名称为FirstBlog.md,编辑Markdown文件，注意保存。</p>
-<p>###测试<br>    $ hexo s –debug<br>    验证成功，此时便可以访问<a href="http://localhost:4000，会出现示例页面。" target="_blank" rel="noopener">http://localhost:4000，会出现示例页面。</a></p>
-<p>###安装hexo-deployer-git自动部署发布工具<br>    npm insatll hexo-deployer-git –save</p>
-<p>###发布<br>    测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。<br>    $ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br>    如果这是你的第一次，终端会让你输入Github 的邮箱和密码，正确输入后，稍等片刻，就会把你的博客上传至Github 了。以后在每次把博客写完后，执行一下这个命令就可以直接发布了。</p>
-<p>###访问<br>    在浏览器中输入<a href="http://username.github.io就能够访问了。" target="_blank" rel="noopener">http://username.github.io就能够访问了。</a></p>
-
+</code></pre><h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4><pre><code>修改主题文件夹中的_config.yml文件，略过(在主题下载网站对应每个主题都有)
+</code></pre><h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><pre><code>在username.github.io/source/_posts下创建你的第一篇博客，例如名称为FirstBlog.md,编辑Markdown文件，注意保存。
+</code></pre><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><pre><code>$ hexo s --debug
+验证成功，此时便可以访问http://localhost:4000，会出现示例页面。
+</code></pre><h3 id="安装hexo-deployer-git自动部署发布工具"><a href="#安装hexo-deployer-git自动部署发布工具" class="headerlink" title="安装hexo-deployer-git自动部署发布工具"></a>安装hexo-deployer-git自动部署发布工具</h3><pre><code>npm insatll hexo-deployer-git --save
+</code></pre><h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><pre><code>测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。
+$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+如果这是你的第一次，终端会让你输入Github 的邮箱和密码，正确输入后，稍等片刻，就会把你的博客上传至Github 了。以后在每次把博客写完后，执行一下这个命令就可以直接发布了。
+</code></pre><h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><pre><code>在浏览器中输入http://username.github.io就能够访问了。
+</code></pre>
         </div>
       </div>
     </div>
