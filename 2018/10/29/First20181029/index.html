@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="longer li">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="多维空间">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="多维空间">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://yoursite.com">
+  
+    <link rel="alternate" href="/atom.xml" title="多维空间" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>多维空间</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Untitled Post</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/longerli">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:2321851552@qq.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By longer li</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-10-29</span>
+            <span class="time">16:08:56</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>#Hexo加Github搭建个人博客</p>
+<p>##安装node并配置环境变量以及npm<br>    配置模块安装等内容不再赘述。</p>
+<p>##创建Github域名和空间<br>    1 注册Github账号，账号名称影响之后的访问地址。<br>    2 创建仓库，存储网站。</p>
+<p>##安装Git<br>    不再赘述。</p>
+<p>##安装Hexo<br>    npm install hexo-cli -g</p>
+<p>##编写发布</p>
+<p>###创建博客<br>    在电脑任意位置执行<br>    hexo init username.github.io(username换成你自己在Github上的用户名)。</p>
+<p>###更改配置</p>
+<p>####安装主题<br>    切换到刚才生成的Hexo目录，安装主题。<br>    以aero-dual主题为例<br>    $ git clone <a href="https://github.com/levblanc/hexo-theme-aero-dual.git" target="_blank" rel="noopener">https://github.com/levblanc/hexo-theme-aero-dual.git</a> themes/aero-dual<br>    更多主题见:<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+<p>####基础配置<br>    注意在Hexo目录中有两个_config.yml文件，一个是项目主配置文件，另一个在themes/主题文件夹<br>    修改主配置文件示例:</p>
+<pre><code># Site
+title: 多维空间
+subtitle:
+description:
+keywords:
+author: longer li
+language: zh-Hans
+timezone:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: aero-dual
+
+# theme_style is default to &apos;light&apos;
+theme_style: dark
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+ type: git
+ repo: https://github.com/longerli/longerli.github.io.git
+注意键值之间有空格。
+</code></pre><p>####主题配置<br>    修改主题文件夹中的_config.yml文件，略过(在主题下载网站对应每个主题都有)</p>
+<p>###写文章<br>    在username.github.io/source/_posts下创建你的第一篇博客，例如名称为FirstBlog.md,编辑Markdown文件，注意保存。</p>
+<p>###测试<br>    $ hexo s –debug<br>    验证成功，此时便可以访问<a href="http://localhost:4000，会出现示例页面。" target="_blank" rel="noopener">http://localhost:4000，会出现示例页面。</a></p>
+<p>###安装hexo-deployer-git自动部署发布工具<br>    npm insatll hexo-deployer-git –save</p>
+<p>###发布<br>    测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。<br>    $ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br>    如果这是你的第一次，终端会让你输入Github 的邮箱和密码，正确输入后，稍等片刻，就会把你的博客上传至Github 了。以后在每次把博客写完后，执行一下这个命令就可以直接发布了。</p>
+<p>###访问<br>    在浏览器中输入<a href="http://username.github.io就能够访问了。" target="_blank" rel="noopener">http://username.github.io就能够访问了。</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        </p><p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
