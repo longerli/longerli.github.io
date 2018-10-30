@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-30T01:46:27.058Z</updated>
+  <updated>2018-10-30T15:27:37.620Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>譬如朝露，去日苦多</title>
+    <link href="http://yoursite.com/2018/10/30/%E8%AD%AC%E5%A6%82%E6%9C%9D%E9%9C%B2%EF%BC%8C%E5%8E%BB%E6%97%A5%E8%8B%A6%E5%A4%9A/"/>
+    <id>http://yoursite.com/2018/10/30/譬如朝露，去日苦多/</id>
+    <published>2018-10-30T13:52:16.000Z</published>
+    <updated>2018-10-30T15:27:37.620Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="人生如白驹过隙，倏忽而已。"><a href="#人生如白驹过隙，倏忽而已。" class="headerlink" title="人生如白驹过隙，倏忽而已。"></a>人生如白驹过隙，倏忽而已。</h1> <a id="more"></a><p>   人生本无常，离去的便再也回不来，心中念着理想国，走在尘世吧。<br>近几日李咏，查良庸先生相继离世，前几日还在看神雕与鹿鼎记，在众多的武侠作品中，我最喜欢神雕侠侣，最感叹于鹿鼎记武侠的消逝。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;人生如白驹过隙，倏忽而已。&quot;&gt;&lt;a href=&quot;#人生如白驹过隙，倏忽而已。&quot; class=&quot;headerlink&quot; title=&quot;人生如白驹过隙，倏忽而已。&quot;&gt;&lt;/a&gt;人生如白驹过隙，倏忽而已。&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="人生杂谈" scheme="http://yoursite.com/categories/%E4%BA%BA%E7%94%9F%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="人生" scheme="http://yoursite.com/tags/%E4%BA%BA%E7%94%9F/"/>
+    
+      <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>我的第一篇博客</title>
