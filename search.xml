@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo博客站点实现静态资源压缩]]></title>
+    <url>%2F2018%2F10%2F31%2FHexo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9%2F</url>
+    <content type="text"><![CDATA[静态资源压缩在站点目录下$ npm install gulp -g 安装gulp插件npm install gulp-minify-css --save npm install gulp-uglify --save npm install gulp-htmlmin --save npm insatll gulp-htmlclean --save npm install gulp-imagemin --save 在Hexo站点下添加gulpfile.js文件，文件内容如下:var gulp = require(&apos;gulp&apos;); var minifycss = require(&apos;gulp-minify-css&apos;); var uglify = require(&apos;gulp-uglify&apos;); var htmlmin = require(&apos;gulp-htmlmin&apos;); var htmlclean = require(&apos;gulp-htmlclean&apos;); var imagemin = require(&apos;gulp-imagemin&apos;); // 压缩css文件 gulp.task(&apos;minify-css&apos;, function() { return gulp.src(&apos;./public/**/*.css&apos;) .pipe(minifycss()) .pipe(gulp.dest(&apos;./public&apos;)); }); // 压缩html文件 gulp.task(&apos;minify-html&apos;, function() { return gulp.src(&apos;./public/**/*.html&apos;) .pipe(htmlclean()) .pipe(htmlmin({ removeComments: true, minifyJS: true, minifyCSS: true, minifyURLs: true, })) .pipe(gulp.dest(&apos;./public&apos;)) }); // 压缩js文件 gulp.task(&apos;minify-js&apos;, function() { return gulp.src([&apos;./public/**/.js&apos;,&apos;!./public/js/**/*min.js&apos;]) .pipe(uglify()) .pipe(gulp.dest(&apos;./public&apos;)); }); // 压缩 public/demo 目录内图片 gulp.task(&apos;minify-images&apos;, function() { gulp.src(&apos;./public/demo/**/*.*&apos;) .pipe(imagemin({ optimizationLevel: 5, //类型：Number 默认：3 取值范围：0-7（优化等级） progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片 interlaced: false, //类型：Boolean 默认：false 隔行扫描gif进行渲染 multipass: false, //类型：Boolean 默认：false 多次优化svg直到完全优化 })) .pipe(gulp.dest(&apos;./public/uploads&apos;)); }); // 默认任务 gulp.task(&apos;default&apos;, [ &apos;minify-html&apos;,&apos;minify-css&apos;,&apos;minify-js&apos;,&apos;minify-images&apos; ]); 在每次执行generate命令后执行gulp就可以实现静态自愿的压缩，压缩完成后执行deploy命令同步到服务器hexo g gulp hexo d 原文链接]]></content>
+      <categories>
+        <category>Hexo站点建设</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[譬如朝露，去日苦多]]></title>
     <url>%2F2018%2F10%2F30%2F%E8%AD%AC%E5%A6%82%E6%9C%9D%E9%9C%B2%EF%BC%8C%E5%8E%BB%E6%97%A5%E8%8B%A6%E5%A4%9A%2F</url>
     <content type="text"><![CDATA[人生如白驹过隙，倏忽而已。人生本无常，离去的便再也回不来，心中念着理想国，走在尘世吧。近几日李咏，查良庸先生相继离世，前几日还在看神雕与鹿鼎记，在众多的武侠作品中，我最喜欢的便是神雕，原文这是第三遍了。虽然不是其最好的作品，但还是向往书中冲破礼教的爱情，对传统的抗争，那种侠之大者，为国为民的江湖情怀。 世间要是缺了那种精神，总会给人以活在世上缺少一种痛快的感觉，侠以武乱禁，是对现世由庙堂对社会秩序维护的一种补充，为社会的公平与正义献出一份力量，像现代人期待英雄的出现，给人以无限的向往。除金庸先生外其他人也各有自己的江湖体系，各有各侠的衡量标准，甚至是仙侠构筑在神话体系之上，但总的来说还是金庸先生在华人世界中的影响力最大，当然古龙先生也是一位江湖泰斗，其他的诸如还珠，梁羽生，黄易，诸葛青，燕垒生等等，虽都有好的武侠故事，但在立意高度上还是有些差距，用以去构筑国人的精神世界还差一点。自其封笔后，以凤歌，孙晓，黄易等为代表，出现后武侠时代。啊，其实还尤其喜欢孙晓的英雄志。可惜一部作品等了十年都没有放出结局，真想骂一句孙晓老贼啊。所谓飞雪连天射白鹿，笑书神侠倚碧鸳，武侠也是需要继承的，精神更是需要继承的啊。]]></content>
@@ -17,8 +29,8 @@
     <url>%2F2018%2F10%2F29%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[Hexo加Github搭建个人博客安装node安装node并配置环境变量以及npm配置模块安装等内容不再赘述。 创建Github域名和空间1 注册Github账号，账号名称影响之后的访问地址。 2 创建仓库，存储网站。 安装Git不再赘述。 安装Hexonpm install hexo-cli -g 编写发布创建博客在电脑任意位置执行 hexo init username.github.io (username换成你自己在Github上的用户名) 更改配置安装主题切换到刚才生成的Hexo目录，安装主题。 以aero-dual主题为例 $ git clone https://github.com/levblanc/hexo-theme-aero-dual.git themes/aero-dual 更多主题 基础配置注意在Hexo目录中有两个_config.yml文件，一个是项目主配置文件，另一个在themes/主题文件夹 修改主配置文件示例: # Site title: 多维空间 subtitle: description: keywords: author: longer li language: zh-Hans timezone: # Extensions ## Plugins: https://hexo.io/plugins/ ## Themes: https://hexo.io/themes/ theme: aero-dual # theme_style is default to &apos;light&apos; theme_style: dark # Deployment ## Docs: https://hexo.io/docs/deployment.html deploy: type: git repo: https://github.com/longerli/longerli.github.io.git 注意键值之间有空格。 主题配置修改主题文件夹中的_config.yml文件，略过(在主题下载网站对应每个主题都有) 写文章在username.github.io/source/_posts下创建你的第一篇博客，例如名称为FirstBlog.md,编辑Markdown文件，注意保存。 测试$ hexo s --debug 验证成功，此时便可以访问http://localhost:4000，会出现示例页面。 安装hexo-deployer-git自动部署发布工具npm insatll hexo-deployer-git --save 发布测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。 $ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d 如果这是你的第一次，终端会让你输入Github 的邮箱和密码，正确输入后，稍等片刻，就会把你的博客上传至Github 了。以后在每次把博客写完后，执行一下这个命令就可以直接发布了。 访问在浏览器中输入http://username.github.io就能够访问了。]]></content>
       <tags>
-        <tag>Blog</tag>
         <tag>Hexo</tag>
+        <tag>Blog</tag>
         <tag>Github</tag>
       </tags>
   </entry>
