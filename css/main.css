@@ -1943,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #03c824;
+  background: #ffd963;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3155,4 +3155,10 @@ header.post-header {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("https://source.unsplash.com/random/1920x1080");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
 }
