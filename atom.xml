@@ -91,9 +91,9 @@ npm install gulp-imagemin --save
       <category term="Hexo站点建设" scheme="http://yoursite.com/categories/Hexo%E7%AB%99%E7%82%B9%E5%BB%BA%E8%AE%BE/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
       <category term="Blog" scheme="http://yoursite.com/tags/Blog/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
       <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
     
