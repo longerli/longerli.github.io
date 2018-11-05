@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[kali安装RTL8812au驱动]]></title>
+    <url>%2F2018%2F11%2F05%2Fkali%E5%AE%89%E8%A3%85RTL8812au%E9%A9%B1%E5%8A%A8%2F</url>
+    <content type="text"><![CDATA[配置好更新源更新软件源中所有软件列表apt-get update 安装Linux内核头文件apt-get install linux-headers-$(uname -r) 如果出现无法定位，找不到的情况 查找可用的linux-image和linux-headers apt-cache search linux-image apt-cache search linux-headers 例如出现以下信息 linux-headers-4.18.0-kali2-amd64 - Header files for Linux 4.18.0-kali2-amd64 因此需先更新到4.18.0版本的内核，然后再安装相应的头文件 apt install linux-image-4.18.0-kali2-amd64 apt install linux-headers-4.18.0-kali2-amd64 reboot 或者 apt install linux-image-4.18.0-kali2-amd64 reboot apt-get install linux-headers-$(uname -r) 或者直接完全升级系统 apt update apt upgrade apt dist-upgrade reboot 然后安装头文件 apt-get install linux-headers-$(uname -r) apt autoremove 安装网卡驱动apt install realtek-rtl88xxau-dkms reboot]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>kali</tag>
+        <tag>无线驱动</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo博客站点实现静态资源压缩]]></title>
     <url>%2F2018%2F10%2F31%2FHexo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9%2F</url>
     <content type="text"><![CDATA[静态资源压缩在站点目录下$ npm install gulp -g 安装gulp插件npm install gulp-minify-css --save npm install gulp-uglify --save npm install gulp-htmlmin --save npm insatll gulp-htmlclean --save npm install gulp-imagemin --save 在Hexo站点下添加gulpfile.js文件，文件内容如下:var gulp = require(&apos;gulp&apos;); var minifycss = require(&apos;gulp-minify-css&apos;); var uglify = require(&apos;gulp-uglify&apos;); var htmlmin = require(&apos;gulp-htmlmin&apos;); var htmlclean = require(&apos;gulp-htmlclean&apos;); var imagemin = require(&apos;gulp-imagemin&apos;); // 压缩css文件 gulp.task(&apos;minify-css&apos;, function() { return gulp.src(&apos;./public/**/*.css&apos;) .pipe(minifycss()) .pipe(gulp.dest(&apos;./public&apos;)); }); // 压缩html文件 gulp.task(&apos;minify-html&apos;, function() { return gulp.src(&apos;./public/**/*.html&apos;) .pipe(htmlclean()) .pipe(htmlmin({ removeComments: true, minifyJS: true, minifyCSS: true, minifyURLs: true, })) .pipe(gulp.dest(&apos;./public&apos;)) }); // 压缩js文件 gulp.task(&apos;minify-js&apos;, function() { return gulp.src([&apos;./public/**/.js&apos;,&apos;!./public/js/**/*min.js&apos;]) .pipe(uglify()) .pipe(gulp.dest(&apos;./public&apos;)); }); // 压缩 public/demo 目录内图片 gulp.task(&apos;minify-images&apos;, function() { gulp.src(&apos;./public/demo/**/*.*&apos;) .pipe(imagemin({ optimizationLevel: 5, //类型：Number 默认：3 取值范围：0-7（优化等级） progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片 interlaced: false, //类型：Boolean 默认：false 隔行扫描gif进行渲染 multipass: false, //类型：Boolean 默认：false 多次优化svg直到完全优化 })) .pipe(gulp.dest(&apos;./public/uploads&apos;)); }); // 默认任务 gulp.task(&apos;default&apos;, [ &apos;minify-html&apos;,&apos;minify-css&apos;,&apos;minify-js&apos;,&apos;minify-images&apos; ]); 在每次执行generate命令后执行gulp就可以实现静态自愿的压缩，压缩完成后执行deploy命令同步到服务器hexo g gulp hexo d 原文链接]]></content>
