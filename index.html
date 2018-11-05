@@ -408,8 +408,7 @@
 
       
         
-          
-            <h2 id="配置好更新源"><a href="#配置好更新源" class="headerlink" title="配置好更新源"></a>配置好更新源</h2><h2 id="更新软件源中所有软件列表"><a href="#更新软件源中所有软件列表" class="headerlink" title="更新软件源中所有软件列表"></a>更新软件源中所有软件列表</h2><pre><code>apt-get update
+          <h2 id="配置好更新源"><a href="#配置好更新源" class="headerlink" title="配置好更新源"></a>配置好更新源</h2><h2 id="更新软件源中所有软件列表"><a href="#更新软件源中所有软件列表" class="headerlink" title="更新软件源中所有软件列表"></a>更新软件源中所有软件列表</h2><pre><code>apt-get update
 </code></pre><h2 id="安装Linux内核头文件"><a href="#安装Linux内核头文件" class="headerlink" title="安装Linux内核头文件"></a>安装Linux内核头文件</h2><pre><code>apt-get install linux-headers-$(uname -r)
 如果出现无法定位，找不到的情况
 查找可用的linux-image和linux-headers
@@ -417,26 +416,14 @@ apt-cache search linux-image
 apt-cache search linux-headers
 例如出现以下信息
 linux-headers-4.18.0-kali2-amd64 - Header files for Linux 4.18.0-kali2-amd64
-因此需先更新到4.18.0版本的内核，然后再安装相应的头文件
-apt install linux-image-4.18.0-kali2-amd64
-apt install linux-headers-4.18.0-kali2-amd64
-reboot
-或者
-apt install linux-image-4.18.0-kali2-amd64
-reboot
-apt-get install linux-headers-$(uname -r)
-或者直接完全升级系统
-apt update
-apt upgrade
-apt dist-upgrade
-reboot
-然后安装头文件
-apt-get install linux-headers-$(uname -r)
-apt autoremove
-</code></pre><h2 id="安装网卡驱动"><a href="#安装网卡驱动" class="headerlink" title="安装网卡驱动"></a>安装网卡驱动</h2><pre><code>apt install realtek-rtl88xxau-dkms
-reboot
 </code></pre>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/05/kali安装RTL8812au驱动/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

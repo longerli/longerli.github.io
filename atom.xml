@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-05T02:52:51.158Z</updated>
+  <updated>2018-11-05T03:07:12.065Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,21 @@
     <link href="http://yoursite.com/2018/11/05/kali%E5%AE%89%E8%A3%85RTL8812au%E9%A9%B1%E5%8A%A8/"/>
     <id>http://yoursite.com/2018/11/05/kali安装RTL8812au驱动/</id>
     <published>2018-11-05T02:34:48.000Z</published>
-    <updated>2018-11-05T02:52:51.158Z</updated>
+    <updated>2018-11-05T03:07:12.065Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="配置好更新源"><a href="#配置好更新源" class="headerlink" title="配置好更新源"></a>配置好更新源</h2><h2 id="更新软件源中所有软件列表"><a href="#更新软件源中所有软件列表" class="headerlink" title="更新软件源中所有软件列表"></a>更新软件源中所有软件列表</h2><pre><code>apt-get update</code></pre><h2 id="安装Linux内核头文件"><a href="#安装Linux内核头文件" class="headerlink" title="安装Linux内核头文件"></a>安装Linux内核头文件</h2><pre><code>apt-get install linux-headers-$(uname -r)如果出现无法定位，找不到的情况查找可用的linux-image和linux-headersapt-cache search linux-imageapt-cache search linux-headers例如出现以下信息linux-headers-4.18.0-kali2-amd64 - Header files for Linux 4.18.0-kali2-amd64因此需先更新到4.18.0版本的内核，然后再安装相应的头文件apt install linux-image-4.18.0-kali2-amd64apt install linux-headers-4.18.0-kali2-amd64reboot或者apt install linux-image-4.18.0-kali2-amd64rebootapt-get install linux-headers-$(uname -r)或者直接完全升级系统apt updateapt upgradeapt dist-upgradereboot然后安装头文件apt-get install linux-headers-$(uname -r)apt autoremove</code></pre><h2 id="安装网卡驱动"><a href="#安装网卡驱动" class="headerlink" title="安装网卡驱动"></a>安装网卡驱动</h2><pre><code>apt install realtek-rtl88xxau-dkmsreboot</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="配置好更新源"><a href="#配置好更新源" class="headerlink" title="配置好更新源"></a>配置好更新源</h2><h2 id="更新软件源中所有软件列表"><a href="#更新软件源中所有软件列表" class="headerlink" title="更新软件源中所有软件列表"></a>更新软件源中所有软件列表</h2><pre><code>apt-get update</code></pre><h2 id="安装Linux内核头文件"><a href="#安装Linux内核头文件" class="headerlink" title="安装Linux内核头文件"></a>安装Linux内核头文件</h2><pre><code>apt-get install linux-headers-$(uname -r)如果出现无法定位，找不到的情况查找可用的linux-image和linux-headersapt-cache search linux-imageapt-cache search linux-headers例如出现以下信息linux-headers-4.18.0-kali2-amd64 - Header files for Linux 4.18.0-kali2-amd64</code></pre> <a id="more"></a><pre><code>因此需先更新到4.18.0版本的内核，然后再安装相应的头文件apt install linux-image-4.18.0-kali2-amd64apt install linux-headers-4.18.0-kali2-amd64reboot或者apt install linux-image-4.18.0-kali2-amd64rebootapt-get install linux-headers-$(uname -r)或者直接完全升级系统apt updateapt upgradeapt dist-upgradereboot然后安装头文件apt-get install linux-headers-$(uname -r)apt autoremove</code></pre><h2 id="安装网卡驱动"><a href="#安装网卡驱动" class="headerlink" title="安装网卡驱动"></a>安装网卡驱动</h2><pre><code>apt install realtek-rtl88xxau-dkmsreboot</code></pre>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;配置好更新源&quot;&gt;&lt;a href=&quot;#配置好更新源&quot; class=&quot;headerlink&quot; title=&quot;配置好更新源&quot;&gt;&lt;/a&gt;配置好更新源&lt;/h2&gt;&lt;h2 id=&quot;更新软件源中所有软件列表&quot;&gt;&lt;a href=&quot;#更新软件源中所有软件列表&quot; class=&quot;head
-      
+      &lt;h2 id=&quot;配置好更新源&quot;&gt;&lt;a href=&quot;#配置好更新源&quot; class=&quot;headerlink&quot; title=&quot;配置好更新源&quot;&gt;&lt;/a&gt;配置好更新源&lt;/h2&gt;&lt;h2 id=&quot;更新软件源中所有软件列表&quot;&gt;&lt;a href=&quot;#更新软件源中所有软件列表&quot; class=&quot;headerlink&quot; title=&quot;更新软件源中所有软件列表&quot;&gt;&lt;/a&gt;更新软件源中所有软件列表&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;安装Linux内核头文件&quot;&gt;&lt;a href=&quot;#安装Linux内核头文件&quot; class=&quot;headerlink&quot; title=&quot;安装Linux内核头文件&quot;&gt;&lt;/a&gt;安装Linux内核头文件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;apt-get install linux-headers-$(uname -r)
+如果出现无法定位，找不到的情况
+查找可用的linux-image和linux-headers
+apt-cache search linux-image
+apt-cache search linux-headers
+例如出现以下信息
+linux-headers-4.18.0-kali2-amd64 - Header files for Linux 4.18.0-kali2-amd64
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -120,9 +125,9 @@ npm install gulp-imagemin --save
       <category term="Hexo站点建设" scheme="http://yoursite.com/categories/Hexo%E7%AB%99%E7%82%B9%E5%BB%BA%E8%AE%BE/"/>
     
     
-      <category term="Blog" scheme="http://yoursite.com/tags/Blog/"/>
-    
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="http://yoursite.com/tags/Blog/"/>
     
       <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
     
