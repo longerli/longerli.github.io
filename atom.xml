@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-06T08:47:16.313Z</updated>
+  <updated>2019-02-16T08:50:01.461Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用win10镜像安装Framework3.5</title>
+    <link href="http://yoursite.com/2019/02/16/%E4%BD%BF%E7%94%A8win10%E9%95%9C%E5%83%8F%E5%AE%89%E8%A3%85Framework3-5/"/>
+    <id>http://yoursite.com/2019/02/16/使用win10镜像安装Framework3-5/</id>
+    <published>2019-02-16T08:19:48.000Z</published>
+    <updated>2019-02-16T08:50:01.461Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>在Windows10中，当我们安装某些软件的时候会提示“你的电脑上的应用需要使用以下Windows功能:.NET Framework 3.5(包括.NET 2.0和3.0)”。在没网或者内网环境并且没有离线包的情况下可以使用win10的镜像.iso文件进行安装。</code></pre><h3 id="装载镜像"><a href="#装载镜像" class="headerlink" title="装载镜像"></a>装载镜像</h3><pre><code>在ISO文件右键装载，系统会显示虚拟光驱“DVD驱动器(G)”,记下盘符G(以你的系统为准)。</code></pre><h3 id="管理员运行powershell或者命令提示符"><a href="#管理员运行powershell或者命令提示符" class="headerlink" title="管理员运行powershell或者命令提示符"></a>管理员运行powershell或者命令提示符</h3><pre><code>输入dism.exe /online /enable-feature /featurename:netfx3 /Source:G:\sources\sxs然后运行，等待进度条到100%，提示操作成功完成。在系统“控制面板”，“程序和功能”，&quot;启用或关闭Windows功能&quot;可以看到&quot;.NET Framework 3.5(包括.NET 2.0和3.0)&quot;,以被选中，表示安装成功。</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;在Windows10中，当我们安装某些软件的时候会提示“你的电脑上的应用需要使用以下Windows功能:.NET Frame
+      
+    
+    </summary>
+    
+      <category term="软件使用" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="Framework" scheme="http://yoursite.com/tags/Framework/"/>
+    
+      <category term="软件安装技巧" scheme="http://yoursite.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>MySql基础1</title>

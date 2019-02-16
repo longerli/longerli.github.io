@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用win10镜像安装Framework3.5]]></title>
+    <url>%2F2019%2F02%2F16%2F%E4%BD%BF%E7%94%A8win10%E9%95%9C%E5%83%8F%E5%AE%89%E8%A3%85Framework3-5%2F</url>
+    <content type="text"><![CDATA[前言在Windows10中，当我们安装某些软件的时候会提示“你的电脑上的应用需要使用以下Windows功能:.NET Framework 3.5(包括.NET 2.0和3.0)”。在没网或者内网环境并且没有离线包的情况下可以使用win10的镜像.iso文件进行安装。 装载镜像在ISO文件右键装载，系统会显示虚拟光驱“DVD驱动器(G)”,记下盘符G(以你的系统为准)。 管理员运行powershell或者命令提示符输入dism.exe /online /enable-feature /featurename:netfx3 /Source:G:\sources\sxs然后运行，等待进度条到100%，提示操作成功完成。 在系统“控制面板”，“程序和功能”，&quot;启用或关闭Windows功能&quot;可以看到&quot;.NET Framework 3.5(包括.NET 2.0和3.0)&quot;,以被选中，表示安装成功。]]></content>
+      <categories>
+        <category>软件使用</category>
+      </categories>
+      <tags>
+        <tag>Framework</tag>
+        <tag>软件安装技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySql基础1]]></title>
     <url>%2F2018%2F11%2F06%2FMySql%E5%9F%BA%E7%A1%801%2F</url>
     <content type="text"><![CDATA[相关概念数据库优点1 持久化数据到本地 2 结构化查询 数据库常见概念1 DB:数据库 2 DBMS:数据库管理系统 3 SQL:结构化查询语言，用于和数据库通信的语言，是几乎所有数据库软件通用的语言 数据库存储数据的特点1 数据存放到表中，表存放到库中 2 一个库可以有多张表，每张表具有唯一的表名来标识自己 3 表中有一个或多个列，称为字段 4 表中的每行数据，相当于java中的对象 常见数据库管理系统MySql Oracle db2 sqlserver MySql背景前身属于瑞典的一加公司，MySql AB,08年被sun收购，09年sun被Oracle收购 MySql的优点1 开源 免费 成本低 2 性能高 移植性好 3 体积小 便于安装 MySql的安装属于C/S架构，一般来讲安装服务版 社区版 企业版 MySql服务的启动和停止方式一:命令行 net start 服务名 net stop 服务名 方式二: 计算机--管理--服务 MySql服务的登陆和退出登陆：mysql [-h 主机名 -P端口号] -u用户名 -p密码 退出:exit或ctrl+c DQL基础查询基础查询语法select 查询列表 from 表名 特点1 查询列表可以是字段 常量 表达式 函数 也可以是多个 2 查询结果是一个虚拟的表 示例1 查询单个字段 select 字段名 from 表名 2 查询多个字段: select 字段1，字段2 from 表名 3 查询所有字段 select * from 表名 4 查询常量 select 常量值 注意:字符型和日期型的常量值必须同单引号引起来，数值型不需要 5 查询函数 select 函数名(实参列表) 6 查询表达式 select 100/1024 7 别名 @ as 别名 @ 空格 别名 8 去重 select distinct 字段名 from 表名 9 + 作用:做加法运算 select 数值+数值;(直接运算) select 字符+数值;(先视图将字符转换为数值，如果转换陈工，则继续运算，否则转换成0，再做运算) select null+值;(结果都为null) 10 concat函数 功能:拼接字符 select concat(字符1，字符2,字符3...); 11 ifnull函数 功能:判断某字段或表达式是否为null,如果为null,返回指定的值，否则返回原值 select ifnull(字段名,指定值) from 表名 12 isnull 功能:判断某字段或表达式是否为null,如果是返回1，如果不是返回0 条件查询语法select 查询列表 from 表名 where 条件 筛选条件分类1 简单条件运算符 &gt; &lt; = &lt;&gt; != &gt;= &lt;= &lt;=&gt;(安全等于) 2 逻辑运算符 &amp;&amp; and || or ！ not 3 模糊查询 like：一般搭配通配符使用,可以判断字符型和数值型 通配符:%任意多个字符，_任意单个字符 between and in is null/is not null is null VS &lt;=&gt; 普通类型的数值 null值 可读性 is null 0 1 1 &lt;==&gt; 1 1 0]]></content>
